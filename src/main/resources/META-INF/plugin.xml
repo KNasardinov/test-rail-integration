@@ -1,0 +1,31 @@
+<idea-plugin>
+    <id>inegration.testrail</id>
+    <name>Test Rail Integration</name>
+    <idea-version since-build="181" until-build="182.*"/>
+    <vendor email="kirill.nasardinov@gmail.com">Kirill Nasardinov</vendor>
+
+    <description><![CDATA[
+    The plugin will syncronize test information of autotests from code repo to TestRail<br>
+    <li>The Plugin updates status of autotests with @TestRailId annotation in your project in TestRail</li>
+    <br>
+    <br>Requirements</br>
+    <ul>
+        <li>Test Class to be updated should be TestRailId, e.g. C134563.java </li>
+        <li>Test Class should have `@TestRailId` annotation</li>
+    </ul>
+    ]]></description>
+
+    <depends>com.intellij.modules.lang</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+    </extensions>
+
+    <actions>
+        <!-- Add your actions here -->
+        <action id="com.knasardinov.idea.actions.MainAction" class="com.knasardinov.idea.actions.MainAction"
+                text="Test Rail Integration" description="Test Rail Integration">
+            <add-to-group group-id="EditorPopupMenu" anchor="last"/>
+        </action>
+    </actions>
+</idea-plugin>
