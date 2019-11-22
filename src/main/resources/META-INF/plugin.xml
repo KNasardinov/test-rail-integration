@@ -18,6 +18,7 @@
     <depends>com.intellij.modules.lang</depends>
 
     <extensions defaultExtensionNs="com.intellij">
+        <applicationService serviceImplementation="com.knasardinov.idea.utils.Settings"/>
         <!-- Add your extensions here -->
     </extensions>
 

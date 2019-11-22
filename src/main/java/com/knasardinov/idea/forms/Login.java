@@ -30,7 +30,7 @@ public class Login extends JDialog{
         loginButton.addActionListener(e -> loginButtonListener(event));
     }
 
-    public void loginButtonListener(AnActionEvent event){
+    private void loginButtonListener(AnActionEvent event){
         messageField.setText(" ");
         String login = loginInputField.getText();
         String password = String.valueOf(passwordInputField.getPassword());

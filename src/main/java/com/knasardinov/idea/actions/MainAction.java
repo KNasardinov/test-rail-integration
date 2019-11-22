@@ -25,8 +25,8 @@ public class MainAction extends AnAction {
         if(username == null || endpoint == null){
             return false;
         }
-        return (new TestRailHelper()
-                .validateTestRailCredentials(username.get(), password.get(), endpoint.get())) ? true : false;
+        return new TestRailHelper()
+                .validateTestRailCredentials(username.get(), password.get(), endpoint.get());
     }
 
     private void openLoginForm(AnActionEvent e){
